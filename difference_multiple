@@ -1,0 +1,15 @@
+
+#creer une liste des contraintes
+listContraintes = []
+for item in os.listdir(mainFolder):
+    if item[-3:]=='shp':
+        listContraintes.append(item)
+
+#processing : difference sur les couches de la liste de contraintes
+count = 0
+for lyr in listContraintes:
+    if count == 0:
+        processing.run("native:difference", {'INPUT':'Mis en tampon','OVERLAY':mainFolder+lyr,'OUTPUT':mainFolder + 'result' + str(count)+'.shp'})
+    else:
+        processing.run("native:difference", {'INPUT':mainFolder + 'result' + str(count - 1)+'.shp','OVERLAY':mainFolder+lyr,'OUTPUT':mainFolder + 'result' + str(count)+'.shp'})
+    count += 1
