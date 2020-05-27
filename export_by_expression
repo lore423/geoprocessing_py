@@ -1,0 +1,1 @@
+processing.run("native:extractbyexpression", {'INPUT':'C:/Users/aJ1013838/Desktop/mede/Corine Land Cover.shp','EXPRESSION':' \"code_18\"  IN (\'111\',\'121\',\'122\',\'123\',\'124\',\'131\',\'141\',\'142\',\'211\',\'221\',\'222\',\'231\',\'242\',\'243\',\'422\',\'521\',\'532\')','OUTPUT':'C:/Users/aJ1013838/Desktop/mede/Corine Land Cover1.shp'})
