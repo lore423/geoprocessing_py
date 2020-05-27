@@ -1,0 +1,13 @@
+import processing 
+import os
+
+#create repertoire de sortie et le groupe de couches
+mainFolder = 'C:/Users/aJ1013838/Desktop/mede/'
+project = QgsProject.instance()
+root = project.layerTreeRoot()
+group = root.findGroup("Plan nationaux d'action (PNA)")
+
+#processing : clip sur les couches d'un groupe
+for child in group.children():
+    if isinstance(child, QgsLayerTreeLayer):
+        processing.run("native:clip", {'INPUT':child.name(),'OVERLAY':'Mis en tampon','OUTPUT':mainFolder + child.name() + '.shp'})
