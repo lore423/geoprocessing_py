@@ -1,6 +1,8 @@
 import processing 
 import os
 
+mainFolder = 'C:/Users/aJ1013838/Desktop/mede/'
+
 #creer une liste des contraintes
 listContraintes = []
 for item in os.listdir(mainFolder):
