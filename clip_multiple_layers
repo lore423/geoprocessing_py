@@ -1,7 +1,7 @@
 import processing 
 import os
 
-#create repertoire de sortie et le groupe de couches
+#creer le repertoire de sortie et creer la variable pour un groupe de couches déjà predefini sur QGIS
 mainFolder = 'C:/Users/aJ1013838/Desktop/mede/'
 project = QgsProject.instance()
 root = project.layerTreeRoot()
